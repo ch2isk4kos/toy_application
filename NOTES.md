@@ -5,3 +5,7 @@
 2. $ rails generate scaffold User name:string email:string
 
 3. $ rake db:migrate
+
+4. $ rails g controller home
+
+5. 

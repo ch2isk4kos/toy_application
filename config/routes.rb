@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-    resources :users, except: [:index]
+    resources :users
+
+    root 'home#index'
 end
