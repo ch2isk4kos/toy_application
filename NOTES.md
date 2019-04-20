@@ -28,8 +28,22 @@
     ```ruby
     class Micropost < ApplicationRecord
         belongs_to :user
-        validates :content, length: { maximum: 140 }
     end
     ```
 
-9. 
+9. setup Validations
+    ```ruby
+    class User < ApplicationRecord
+        has_many :microposts
+        validates :name, presence: true
+        validates :email, presence: true
+    end
+    ```
+    ```ruby
+    class Micropost < ApplicationRecord
+        belongs_to :user
+        validates :content, length: { maximum: 140 }, presence: true
+    end
+    ```
+
+10. 
